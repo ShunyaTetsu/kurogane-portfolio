@@ -1,21 +1,5 @@
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import WorksSection from "./components/WorksSection";
-import AboutSection from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+import HomeClient from "./components/HomeClient";
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <HeroSection />
-        <WorksSection />
-        <AboutSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
-  );
+  return <HomeClient />;
 }

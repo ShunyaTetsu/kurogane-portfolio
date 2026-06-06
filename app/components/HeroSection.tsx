@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+export default function HeroSection({ started = false }: { started?: boolean }) {
   return (
     <section
       className="relative min-h-screen flex flex-col justify-between px-8 md:px-12 pt-32 pb-12"
@@ -10,7 +10,7 @@ export default function HeroSection() {
       {/* Top rule */}
       <motion.div
         initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
+        animate={started ? { scaleX: 1 } : {}}
         transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
         className="absolute top-16 left-8 right-8 md:left-12 md:right-12 origin-left"
         style={{ height: "1px", backgroundColor: "rgba(17,17,17,0.12)" }}
@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full">
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={started ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
           style={{
             fontSize: "10px",
@@ -36,7 +36,7 @@ export default function HeroSection() {
         <div className="overflow-hidden">
           <motion.h1
             initial={{ y: "100%" }}
-            animate={{ y: 0 }}
+            animate={started ? { y: 0 } : {}}
             transition={{ duration: 1.0, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
             style={{
               fontFamily: "var(--font-cinzel), serif",
@@ -54,7 +54,7 @@ export default function HeroSection() {
         <div className="overflow-hidden">
           <motion.h1
             initial={{ y: "100%" }}
-            animate={{ y: 0 }}
+            animate={started ? { y: 0 } : {}}
             transition={{ duration: 1.0, delay: 0.82, ease: [0.16, 1, 0.3, 1] }}
             style={{
               fontFamily: "var(--font-cinzel), serif",
@@ -71,7 +71,7 @@ export default function HeroSection() {
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={started ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, delay: 1.3 }}
           className="mt-10 max-w-sm"
           style={{
@@ -89,7 +89,7 @@ export default function HeroSection() {
       {/* Bottom row */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={started ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 1.6 }}
         className="max-w-7xl mx-auto w-full flex items-end justify-between"
       >
