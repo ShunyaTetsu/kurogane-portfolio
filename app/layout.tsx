@@ -17,11 +17,11 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "KUROGANE — Web Designer",
-  description: "Webデザイナー KUROGANE のポートフォリオ。UI/UXデザイン・Webサイト制作・ブランディングを手がける。",
+  title: "KUROGANE — まだ世にないものをカタチにする",
+  description: "「作る熱が、使う感動になる。」心が動くものだけを手がけるKUROGANEのポートフォリオサイト。アプリ開発・SNS戦略のご相談はこちらから。",
   openGraph: {
-    title: "KUROGANE — Web Designer",
-    description: "Webデザイナー KUROGANE のポートフォリオ。",
+    title: "KUROGANE — まだ世にないものをカタチにする",
+    description: "「作る熱が、使う感動になる。」心が動くものだけを手がけるKUROGANEのポートフォリオサイト。アプリ開発・SNS戦略のご相談はこちらから。",
     type: "website",
   },
 };

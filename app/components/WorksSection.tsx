@@ -10,20 +10,6 @@ const projects = [
     year: "2026",
     description: "スポーツ好きのためのコミュニティアプリ。UI設計からビジュアルアイデンティティまで一貫してデザイン。",
   },
-  {
-    index: "02",
-    title: "Project Title",
-    category: "Web Design",
-    year: "2026",
-    description: "クライアントのブランドを体現するWebサイト。ユーザー体験を軸にした情報設計とビジュアルデザイン。",
-  },
-  {
-    index: "03",
-    title: "Project Title",
-    category: "Brand Identity",
-    year: "2026",
-    description: "ゼロからブランドを構築するプロジェクト。ロゴ・カラー・タイポグラフィシステムの設計。",
-  },
 ];
 
 function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: number }) {
@@ -131,7 +117,7 @@ export default function WorksSection() {
         </motion.div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-8" style={{ maxWidth: "720px" }}>
           {projects.map((project, i) => (
             <ProjectCard key={project.index} project={project} delay={0.1 * i} />
           ))}
